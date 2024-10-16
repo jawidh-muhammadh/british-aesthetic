@@ -1253,7 +1253,7 @@ export default function Home() {
 
         {/* Testimonial Card 2 */}
         <div className="snap-center border flex-shrink-0 w-[300px] bg-white rounded-lg shadow-lg p-6">
-           <Image src="/per1.jfif" width={100} height={100} alt="User" className="rounded-full  object-cover w-16 h-16 mx-auto" />
+           <Image src="/per1.jpg" width={100} height={100} alt="User" className="rounded-full  object-cover w-16 h-16 mx-auto" />
           <h3 className="mt-4 text-center text-lg font-semibold"> Dr. R N Wickramasinghe</h3>
           {/* <p className="text-center text-sm text-gray-500">Co-founder, Green Earth UK</p> */}
           <p className="text-center mt-4 text-gray-600">
@@ -1283,7 +1283,7 @@ export default function Home() {
 
 
         <div className="snap-center border flex-shrink-0 w-[300px] bg-white rounded-lg shadow-lg p-6">
-          <Image src="/per3.jfif" width={100} height={100} alt="User" className="rounded-full  object-cover w-16 h-16 mx-auto" />
+          <Image src="/per3.jpg" width={100} height={100} alt="User" className="rounded-full  object-cover w-16 h-16 mx-auto" />
           <h3 className="mt-4 text-center text-lg font-semibold">Dr. C P Jayasinghe</h3>
           {/* <p className="text-center text-sm text-gray-500">Owner, Spice Culture Restaurant, India</p> */}
           <p className="text-center mt-4 text-gray-600">
@@ -1298,7 +1298,7 @@ export default function Home() {
 
 
         <div className="snap-center border flex-shrink-0 w-[300px] bg-white rounded-lg shadow-lg p-6">
-          <Image src="/per4.jfif" width={100} height={100} alt="User" className="rounded-full  object-cover w-16 h-16 mx-auto" />
+          <Image src="/per4.jpg" width={100} height={100} alt="User" className="rounded-full  object-cover w-16 h-16 mx-auto" />
           <h3 className="mt-4 text-center text-lg font-semibold">Dr. S L Wijerathne</h3>
           {/* <p className="text-center text-sm text-gray-500">Founder, UrbanFit Gyms, India</p> */}
           <p className="text-center mt-4 text-gray-600">
@@ -1312,7 +1312,7 @@ export default function Home() {
         </div>
 
         <div className="snap-center border flex-shrink-0 w-[300px] bg-white rounded-lg shadow-lg p-6">
-          <Image src="/per5.jfif" width={100} height={100} alt="User" className="rounded-full  object-cover w-16 h-16 mx-auto" />
+          <Image src="/per5.jpg" width={100} height={100} alt="User" className="rounded-full  object-cover w-16 h-16 mx-auto" />
           <h3 className="mt-4 text-center text-lg font-semibold">Dr. T D Perera</h3>
           {/* <p className="text-center text-sm text-gray-500">Head of Marketing, Serenity Spa, UK</p> */}
           <p className="text-center mt-4 text-gray-600">
@@ -1327,7 +1327,7 @@ export default function Home() {
 
 
         <div className="snap-center border flex-shrink-0 w-[300px] bg-white rounded-lg shadow-lg p-6">
-          <Image src="/per6.jfif" width={100} height={100} alt="User" className="rounded-full  object-cover w-16 h-16 mx-auto" />
+          <Image src="/per6.jpg" width={100} height={100} alt="User" className="rounded-full  object-cover w-16 h-16 mx-auto" />
           <h3 className="mt-4 text-center text-lg font-semibold">Dr. N H Senarath</h3>
           {/* <p className="text-center text-sm text-gray-500">Operations Manager, EcoTech Solutions, Malaysia</p> */}
           <p className="text-center mt-4 text-gray-600">
