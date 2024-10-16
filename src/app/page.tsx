@@ -20,11 +20,11 @@ import { getFirestore, collection, addDoc } from 'firebase/firestore';
 
 
 
-interface EnrollmentFormProps {
-  isOpen: boolean;
-  onClose: () => void;
-  courseName: string; // Passed from the state
-}
+// interface EnrollmentFormProps {
+//   isOpen: boolean;
+//   onClose: () => void;
+//   courseName: string; // Passed from the state
+// }
 
 
 
@@ -173,13 +173,13 @@ export default function Home() {
   };
 
 
-  const aboutUsSection = useRef<HTMLDivElement>(null);
+  // const aboutUsSection = useRef<HTMLDivElement>(null);
   // const servicesWeOfferSection = useRef<HTMLDivElement>(null);
   // const portfolioSection = useRef<HTMLDivElement>(null);
   const testimonialsection = useRef<HTMLDivElement>(null);
   const faqsection = useRef<HTMLDivElement>(null);
   const coursesection = useRef<HTMLDivElement>(null);
-  const contactussection = useRef<HTMLDivElement>(null);
+  // const contactussection = useRef<HTMLDivElement>(null);
 
   // Step 2: Create a scroll function
   // const scrollToSection = (ref:any) => {
