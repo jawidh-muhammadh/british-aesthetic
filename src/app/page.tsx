@@ -341,8 +341,8 @@ export default function Home() {
 
           <div className="  w-full   lg:hidden p-2 flex justify-between items-center">
       
-      <Image src={logoText} alt="" width={500} height={500}  className=" w-36 h-fit object-cover" />
-
+      {/* <Image src={logoText} alt="" width={500} height={500}  className=" w-36 h-fit object-cover" /> */}
+      <Image src="/logobritish.png" alt="" width={1000} height={1000} className=" w-16    h-fit object-cover" /> 
 
 
         <svg onClick={ () => setopenModal(true)} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-6">
