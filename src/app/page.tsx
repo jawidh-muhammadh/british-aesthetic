@@ -5,7 +5,7 @@ import Image from "next/image";
 // import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
-import logoText from "../../public/logotext.jpg"
+// import logoText from "../../public/logotext.jpg"
 // import aiart from "../../public/aiart.jpg"
 import Link from "next/link";
 import { useRouter } from "next/navigation";
