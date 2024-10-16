@@ -832,7 +832,7 @@ export default function Home() {
             <Image
             width={1000}
             height={1000}
-              src="/course3.png"
+              src="/course5.PNG"
               alt="Botox"
               className="w-full h-48 object-cover rounded-lg mb-4"
             />
