@@ -18,8 +18,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Elevate Branding - Digital Marketing Agency",
-  description: "Helping businesses grow with innovative digital marketing strategies, branding, and creative solutions tailored for success",
+  title: "British Academy of Aesthetics - Leading Aesthetic Training & Certification",
+  description: "Empowering aspiring professionals with cutting-edge aesthetics and cosmetology courses, CPD-approved certifications, and expert training for a successful career in the beauty industry",
 };
 
 
