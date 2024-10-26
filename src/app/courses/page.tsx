@@ -986,7 +986,7 @@ const Page = () => {
    {/* whatsapp icon  */}
    <div className="fixed bottom-7 right-7     animate-drip-expand z-50">
       <a
-        href="https://wa.me/1234567890" // Replace with your WhatsApp number
+         href="https://wa.me/+94706548855" // Replace with your WhatsApp number
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat on WhatsApp"
