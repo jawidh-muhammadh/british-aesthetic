@@ -398,7 +398,7 @@ export default function ProductDetails() {
               <p className="text-sm text-gray-400 mt-2">{product.description}</p>
               <p className="text-2xl font-bold text-[#FF6956] mt-4">${product.price}</p>
               <a
-                href={`https://wa.me/94771760104?text=Hello, I want to buy ${product.name}`}
+                href={`https://wa.me/94706548855?text=Hello, I want to buy ${product.name}`}
                 className="bg-green-500 text-white px-6 py-3 rounded-md mt-6 inline-block hover:bg-green-600 transition"
                 target="_blank"
                 rel="noopener noreferrer"
