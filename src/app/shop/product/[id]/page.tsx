@@ -1,17 +1,15 @@
 'use client';
-import { useEffect, useRef, useState } from 'react';
+import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
+import { useEffect, useRef, useState } from 'react';
 
 // const products = [
-//   { id: 1, name: 'Product A', description: 'Description A', price: 100, category: 'Category 1', image: 'https://via.placeholder.com/150' },
-//   { id: 2, name: 'Product B', description: 'Description B', price: 200, category: 'Category 2', image: 'https://via.placeholder.com/150' },
-//   { id: 3, name: 'Product C', description: 'Description C', price: 150, category: 'Category 1', image: 'https://via.placeholder.com/150' },
-//   { id: 4, name: 'Product D', description: 'Description D', price: 300, category: 'Category 2', image: 'https://via.placeholder.com/150' },
+//   { id: 1, name: 'Product A', description: 'High-quality product A for all your needs.', price: 100, category: 'Category 1', image: 'https://via.placeholder.com/400' },
+//   { id: 2, name: 'Product B', description: 'Premium product B designed for excellence.', price: 200, category: 'Category 2', image: 'https://via.placeholder.com/400' },
+//   { id: 3, name: 'Product C', description: 'Affordable and durable product C.', price: 150, category: 'Category 1', image: 'https://via.placeholder.com/400' },
+//   { id: 4, name: 'Product D', description: 'Luxury product D for discerning customers.', price: 300, category: 'Category 2', image: 'https://via.placeholder.com/400' },
 // ];
-
-
 
 const products = [
   {
@@ -82,7 +80,7 @@ const products = [
     id: 9,
     name: "Juvederm Ultra 4 (2 x 1ml) Inj.",
     description: "Hyaluronic acid filler for moderate to deeper facial wrinkles. Enhances lip contour and volume with long-lasting effects.",
-    price:  95000, // Approximated based on the context
+    price: 60000, // Approximated based on the context
     category: "Dermal Fillers",
     image:  '/products/i8.jpeg',
   },
@@ -95,7 +93,7 @@ const products = [
     description: "JUVEDERM VOLIFT LIDOCAINE is an injectable filler for deeper skin lines and wrinkles, also used for facial contouring and restoring volume. Contains lidocaine for pain reduction.",
     packDetails: "2 X 1ML syringes, 4 X 30G 1/2\" needles",
     composition: "17.5 MG/ML hyaluronic acid, 3 MG/ML lidocaine",
-    price: 100000,
+    price: 60000,
     benefits: [
       "Fill deeper facial lines and wrinkles",
       "Restore facial volume and contour cheeks, cheekbones, and chin"
@@ -111,7 +109,7 @@ const products = [
     name: "PROFHILO H+L (1 X 2ML) INJ",
     description: "PROFHILO H+L is a stabilized hyaluronic acid product for skin remodeling and laxity treatment.",
     packDetails: "1 X 2ML syringe",
-    price: 58000,
+    price: 60000,
     benefits: [
       "Improvement in tissue quality",
       "Skin remodeling",
@@ -128,7 +126,7 @@ const products = [
     name: "JALUPRO AMINO ACID",
     description: "JALUPRO Amino Acid is a sterile, resorbable solution for dermal bio-revitalization, improving skin texture, and minimizing wrinkles.",
     packDetails: "2 sterile bottles of amino acids, 2 vials of sodium hyaluronate",
-    price: 36000,
+    price: 60000,
     benefits: [
       "Eliminate wrinkles and improve skin texture",
       "Treat areas like face, neck, décolleté, underarms, hands, thighs, abdomen, and knees"
@@ -144,7 +142,7 @@ const products = [
     description: "An injectable solution for restoring elasticity in the periorbital area, addressing under-eye bags, dark circles, and wrinkles.",
     packDetails: "1 X 1ML syringe",
     retailPrice: "45,000 LKR (with Delivery) per Pack",
-    price: 45000,
+    price: 60000,
     specialDiscount: "Available for 5 or more packs",
     image:  '/products/i12.jpeg',
   },
@@ -153,7 +151,7 @@ const products = [
     name: "AQUALYX (5 x 8ml Vials)",
     description: "Aqualyx is a fat-dissolving product for treating localized fat pockets under the skin.",
     packDetails: "5 X 8ml vials",
-    price:  65000,
+    price: 60000,
     benefits: [
       "Dissolves pockets of unwanted fat",
       "Contours specific body areas"
@@ -169,7 +167,7 @@ const products = [
     description: "Contains 80mg of hybrid HA for lifting and hydrating the skin, and supporting collagen and elastin synthesis.",
     packDetails: "1 X 2.5ML syringe",
     retailPrice: "47,000 LKR (with Delivery) per Pack",
-    price: 47000,
+    price: 60000,
     specialDiscount: "Available for 5 or more packs",
     image:  '/products/i14.jpeg',
   },
@@ -187,68 +185,58 @@ const products = [
 ];
 
 
+export default function ProductDetails() {
 
-export default function Shop() {
-  const [search, setSearch] = useState('');
-  const [sort, setSort] = useState('');
-  const [category, setCategory] = useState('');
+  const router = useRouter()
+ 
 
-  const filteredProducts = products
-    .filter((product) =>
-      product.name.toLowerCase().includes(search.toLowerCase()) &&
-      (!category || product.category === category)
-    )
-    .sort((a, b) => {
-      if (sort === 'name') return a.name.localeCompare(b.name);
-      if (sort === 'price') return a.price - b.price;
-      return 0;
-    });
+  const absoluteElementRef = useRef<HTMLDivElement>(null);
+  const [openModal, setopenModal] = useState(false);
 
-    const router = useRouter()
+  useEffect(() => {
+    const handleClickOutside = (event:MouseEvent) => {
+      if (
+        absoluteElementRef.current &&
+        !absoluteElementRef.current?.contains(event.target as Node) &&
+        openModal
+      ) {
+        setopenModal(false); // Call your function to close the modal or trigger any other action
+      }
+    };
 
-     
-    const absoluteElementRef = useRef<HTMLDivElement>(null);
-    const [openModal, setopenModal] = useState(false);
-  
-    useEffect(() => {
-      const handleClickOutside = (event:MouseEvent) => {
-        if (
-          absoluteElementRef.current &&
-          !absoluteElementRef.current?.contains(event.target as Node) &&
-          openModal
-        ) {
-          setopenModal(false); // Call your function to close the modal or trigger any other action
-        }
-      };
-  
-      // const handleScroll = () => {
-      //   if (openModal) {
-      //     setopenModal(false); // Call your function to close the modal or trigger any other action
-      //   }
-      // };
-  
-      document.addEventListener("click", handleClickOutside);
-      // window.addEventListener("scroll", handleScroll);
-  
-      return () => {
-        document.removeEventListener("click", handleClickOutside);
-        // window.removeEventListener("scroll", handleScroll);
-      };
-    }, [openModal]);
-  
-  
-    const [clickedTab, setclickedTab] = useState("shop") 
-  
+    // const handleScroll = () => {
+    //   if (openModal) {
+    //     setopenModal(false); // Call your function to close the modal or trigger any other action
+    //   }
+    // };
+
+    document.addEventListener("click", handleClickOutside);
+    // window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+      // window.removeEventListener("scroll", handleScroll);
+    };
+  }, [openModal]);
+
+
+  const [clickedTab, setclickedTab] = useState("shop") 
+
+  const { id } = useParams();
+  const product = products.find((p) => p.id === Number(id));
+  const recommendedProducts = products.filter((p) => p.id !== Number(id));
+
+  if (!product) return <p className="text-center mt-20 text-xl font-semibold text-gray-600">Product not found</p>;
 
   return (
-
     <>
+    
 
-<div className=" w-full   bg-[#2C2C2C]] bg-[#101010]] bg-[#0A0A1D] overflow-hidden flex flex-col items-center justify-center">
+    <div className=" w-full   bg-[#2C2C2C]] bg-[#101010]] bg-[#0A0A1D] overflow-hidden flex flex-col items-center justify-center">
 
 <div className=" max-w-7xl bg-[#0A0A1D]  w-full">
 
-{/* underline decoraton-2 underline-offset-4 decoration-[#4482FF] */}
+
 <div className=" w-full  2xl:h-fit  h-full flex flex-col p-4">
           
 
@@ -391,74 +379,62 @@ export default function Shop() {
            </div> 
 
 
-  
-           {/* focus:outline-none focus:ring focus:ring-blue-300 */}
+
+
+
+
 
   </div>
   </div>
+
     <div className="p-6 bg-[#0b1217] min-h-screen">
-      <h1 className="text-3xl font-extrabold text-center text-white mb-8">Shop</h1>
-
-      {/* Filters Section */}
-      <div className="flex flex-col md:flex-row gap-4 mb-8 justify-between">
-        <input
-          type="text"
-          placeholder="Search for products..."
-          className=" border-white/40 border p-3 text-white bg-[#434343] rounded-md flex-1 shadow-sm "
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-        />
-
-        <select
-          className="border border-gray-300 p-3 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-blue-300"
-          value={sort}
-          onChange={(e) => setSort(e.target.value)}
-        >
-          <option value="">Sort By</option>
-          <option value="name">Name</option>
-          <option value="price">Price</option>
-        </select>
-
-        <select
-          className="border border-gray-300 p-3 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-blue-300"
-          value={category}
-          onChange={(e) => setCategory(e.target.value)}
-        >
-          <option value="">All Categories</option>
-          <option value="Category 1">Category 1</option>
-          <option value="Category 2">Category 2</option>
-        </select>
-      </div>
-
-      {/* Products Section */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-        {filteredProducts.map((product) => (
-          <div
-            key={product.id}
-            className="bg-[#171f26] border border-white shadow-md rounded-lg overflow-hidden transform transition duration-300 hover:scale-105"
-          >
-            <img src={product.image} alt={product.name} className="w-full h-48 object-cover" />
-            <div className="p-4">
-              <h2 className="text-lg font-bold text-white truncate">{product.name}</h2>
-              <p className="text-sm text-gray-400 mt-1">{product.description}</p>
-              <p className="text-lg font-semibold text-[#FF6956] mt-2">LKR {product.price}</p>
-              <Link href={`/shop/product/${product.id}`}>
-                <h1 className="block mt-4 bg-[#4482FF] text-white text-center py-2 rounded-md ">
-                  View Details
-                </h1>
-              </Link>
+      <div className="max-w-5xl mx-auto">
+        {/* Product Section */}
+        <div className="bg-[#171f26] border border-white  shadow-lg rounded-lg overflow-hidden mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-2">
+            <img src={product.image} alt={product.name} className="w-full h-96 object-cover" />
+            <div className="p-6">
+              <h1 className="text-3xl font-bold text-white">{product.name}</h1>
+              <p className="text-sm text-gray-400 mt-2">{product.description}</p>
+              <p className="text-2xl font-bold text-[#FF6956] mt-4">${product.price}</p>
+              <a
+                href={`https://wa.me/94771760104?text=Hello, I want to buy ${product.name}`}
+                className="bg-green-500 text-white px-6 py-3 rounded-md mt-6 inline-block hover:bg-green-600 transition"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Buy on WhatsApp
+              </a>
             </div>
           </div>
-        ))}
-      </div>
+        </div>
 
-      {/* No Products Found */}
-      {filteredProducts.length === 0 && (
-        <p className="text-center text-gray-200 mt-8">No products found. Try adjusting your filters.</p>
-      )}
+        {/* Recommended Products */}
+        <h2 className="text-2xl font-bold text-white mb-6">Recommended Products</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {recommendedProducts.map((p) => (
+            <div
+              key={p.id}
+              className="bg-[#171f26] shadow-md rounded-lg overflow-hidden transform transition duration-300 hover:scale-105"
+            >
+              <img src={p.image} alt={p.name} className="w-full h-48 object-cover" />
+              <div className="p-4">
+                <h3 className="text-lg font-bold text-white truncate">{p.name}</h3>
+                <p className="text-sm text-gray-400 mt-1">{p.description}</p>
+                <p className="text-lg  font-semibold text-[#FF6956] mt-2">LKR {p.price}</p>
+                <Link href={`/shop/product/${p.id}`}>
+                  <h1 className="block mt-4 bg-blue-600 text-white text-center py-2 rounded-md hover:bg-blue-700">
+                    View Details
+                  </h1>
+                </Link>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
 
 
-  </>
+    </>
   );
 }
