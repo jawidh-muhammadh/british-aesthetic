@@ -304,11 +304,12 @@ const Page = () => {
               {/* <Link href="/services"> <h1    className=" cursor-pointer"  >Services & Pricings </h1> </Link> */}
               {/* <h1 onClick={() => scrollToSection(portfolioSection)}  className=" cursor-pointer"  > Our Works </h1> */}
               <h1  onClick={() => router.push('/')}  className=" cursor-pointer text-[#E0E0E0]  "  >Home </h1>
-              <h1  onClick={() => router.push('/courses')}  className=" underline decoraton-2 underline-offset-4 decoration-[#4482FF] cursor-pointer text-[#E0E0E0]  "  >Courses </h1>
+              <h1  onClick={() => router.push('/courses')}  className=" underline decoraton-2 underline-offset-4 decoration-white cursor-pointer text-[#E0E0E0]  "  >Courses </h1>
               <h1  onClick={() => router.push('/about')}  className=" cursor-pointer text-[#E0E0E0]  "  >About Us </h1>
               {/* <h1 onClick={() => scrollToSection(faqsection)}  className=" cursor-pointer text-[#E0E0E0]  "  >FAQs </h1> */}
               {/* <h1 onClick={() => scrollToSection(testimonialsection)}  className=" cursor-pointer text-[#E0E0E0]"  >Testimonials </h1> */}
-             <Link href="/shop"> <h1  className=" cursor-pointer  bg-[#4482FF] hover:bg-[#4279e7] px-4 py-1 text-sm text-white rounded-full"  >SHOP </h1> </Link>
+             {/* <Link href="/shop"> <h1  className=" cursor-pointer  bg-[#4482FF] hover:bg-[#4279e7] px-4 py-1 text-sm text-white rounded-full"  >SHOP </h1> </Link> */}
+             <Link href="/shop"> <h1  className=" cursor-pointer  bg-[#FF5A5A] hover:bg-[#e95252] px-4 py-1 text-sm text-white rounded-full"  >SHOP </h1> </Link>
               {/* <h1 onClick={() => scrollToSection(contactussection)}  className=" cursor-pointer"  >Contact us </h1> */}
               
             </div>
@@ -480,7 +481,7 @@ const Page = () => {
   <path d="M4.462 19.462c.42-.419.753-.89 1-1.395.453.214.902.435 1.347.662a6.742 6.742 0 0 1-1.286 1.794.75.75 0 0 1-1.06-1.06Z" />
 </svg>
 
- </span> <span className=" align-middle inline-block pl-[1px] text-white">Trainer: Dr. M Muzammil </span></p>    
+ </span> <span className=" align-middle inline-block pl-[1px] text-white">Trainer: Dr. Muzammil </span></p>    
 
 
          <p className="   text-slate-400"> <span  className="inline-block align-middle" ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-[#4482FF]] text-white">
@@ -495,14 +496,14 @@ const Page = () => {
 
  </span> <span className=" align-middle inline-block pl-[1px] text-white">      Certificate Awarded     </span></p>        
 
-
+ {/* bg-[#4482FF] */}
    
         
             </div>
             <h3 className="text-xl  font-poppinssemi mb-4 text-white">PREMIUM BOTOX INJECTABLE MASTERCOURSE</h3>
             <p className="text-gray500 mb-6  font-poppinsreg text-slate-200">Gain confidence in Botox facial mapping and practice advanced injection techniques before performing treatments.</p>
             <p className="text-blue600  text-[#FF6956] font-bold font-poppinsreg5 text-2xl mb-4">LKR 185,000</p>
-            <Button onPress={() =>  {  setselectedCourse("PREMIUM BOTOX INJECTABLE MASTERCOURSE") ;  onOpen() } } className="bg-[#4482FF] text-white px-6 py-2 rounded-lg ">
+            <Button onPress={() =>  {  setselectedCourse("PREMIUM BOTOX INJECTABLE MASTERCOURSE") ;  onOpen() } } className=" bg-[#FF5A5A] font-medium text-white px-6 py-2 rounded-lg ">
               Enroll Now
             </Button>
           </div>
@@ -553,7 +554,7 @@ const Page = () => {
   <path d="M4.462 19.462c.42-.419.753-.89 1-1.395.453.214.902.435 1.347.662a6.742 6.742 0 0 1-1.286 1.794.75.75 0 0 1-1.06-1.06Z" />
 </svg>
 
- </span> <span className=" align-middle inline-block pl-[1px] text-white">Trainer: Dr. M Muzammil </span></p>    
+ </span> <span className=" align-middle inline-block pl-[1px] text-white">Trainer: Dr. Muzammil </span></p>    
 
 
          <p className="   text-slate-400"> <span  className="inline-block align-middle" ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-[#4482FF]] text-white">
@@ -575,7 +576,7 @@ const Page = () => {
             <h3 className="text-xl  font-poppinssemi mb-4 text-white">PREMIUM DERMAL FILLERS & SKIN BOOSTERS INJECTABLE MASTER COURSE</h3>
             <p className="text-gray500 text-slate-200  mb-6  font-poppinsreg">Gain proficiency in facial anatomy marking and refine your skills with hands-on practice of various injection techniques prior to treatment application</p>
             <p className="text-blue600 text-[#FF6956] font-bold font-poppinsreg5 text-2xl mb-4">LKR 195,000</p>
-            <Button onPress={() =>  {  setselectedCourse("PREMIUM DERMAL FILLERS & SKIN BOOSTERS INJECTABLE MASTER COURSE") ;  onOpen() } } className="bg-[#4482FF] text-white px-6 py-2 rounded-lg ">
+            <Button onPress={() =>  {  setselectedCourse("PREMIUM DERMAL FILLERS & SKIN BOOSTERS INJECTABLE MASTER COURSE") ;  onOpen() } } className="bg-[#FF5A5A] font-medium text-white px-6 py-2 rounded-lg ">
               Enroll Now
             </Button>
           </div>
@@ -627,7 +628,7 @@ const Page = () => {
   <path d="M4.462 19.462c.42-.419.753-.89 1-1.395.453.214.902.435 1.347.662a6.742 6.742 0 0 1-1.286 1.794.75.75 0 0 1-1.06-1.06Z" />
 </svg>
 
- </span> <span className=" align-middle inline-block pl-[1px] text-white">Trainer: Dr. M Muzammil </span></p>    
+ </span> <span className=" align-middle inline-block pl-[1px] text-white">Trainer: Dr. Muzammil </span></p>    
 
 
          <p className="   text-slate-400"> <span  className="inline-block align-middle" ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-[#4482FF]] text-white">
@@ -649,7 +650,7 @@ const Page = () => {
             <h3 className="text-xl  font-poppinssemi mb-4 text-white">ADVANCED FILLERS BOTOX AND THRED LIFITINGFOR NON SURGICAL 3-D FULL FACE RE-MODELLING</h3>
             <p className="text-gray500 text-slate-200 mb-6  font-poppinsreg ">Master the latest injection techniques, including thread lifts, to achieve comprehensive facial rejuvenation, neck lifting, and hair care enhancements</p>
             <p className="text-blue600 text-[#FF6956] font-bold font-poppinsreg5 text-2xl mb-4">LKR 150,000</p>
-            <Button onPress={() =>  {  setselectedCourse("ADVANCED FILLERS BOTOX AND THRED LIFITINGFOR NON SURGICAL 3-D FULL FACE RE-MODELLING") ;  onOpen() } } className="bg-[#4482FF] text-white px-6 py-2 rounded-lg ">
+            <Button onPress={() =>  {  setselectedCourse("ADVANCED FILLERS BOTOX AND THRED LIFITINGFOR NON SURGICAL 3-D FULL FACE RE-MODELLING") ;  onOpen() } } className="bg-[#FF5A5A] font-medium text-white px-6 py-2 rounded-lg ">
               Enroll Now
             </Button>
           </div>
@@ -702,7 +703,7 @@ const Page = () => {
   <path d="M4.462 19.462c.42-.419.753-.89 1-1.395.453.214.902.435 1.347.662a6.742 6.742 0 0 1-1.286 1.794.75.75 0 0 1-1.06-1.06Z" />
 </svg>
 
- </span> <span className=" align-middle inline-block pl-[1px] text-white">Trainer: Dr. M Muzammil </span></p>    
+ </span> <span className=" align-middle inline-block pl-[1px] text-white">Trainer: Dr. Muzammil </span></p>    
 
 
          <p className="   text-slate-400"> <span  className="inline-block align-middle" ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-[#4482FF]] text-white">
@@ -724,7 +725,7 @@ const Page = () => {
             <h3 className="text-xl  font-poppinssemi mb-4 text-white">CLINICAL COSMETOLOGY AND TRICHOLOGY COURSE</h3>
             <p className="text-gray500 mb-6  font-poppinsreg text-slate-200 ">{`Master advanced techniques in skin care, hair treatments, and cosmetic procedures, gaining expertise in clinical cosmetology and trichology for comprehensive beauty and wellness solutions`}</p>
             <p className="text-blue600  text-[#FF6956] font-bold font-poppinsreg5 text-2xl mb-4">LKR 260,000</p>
-            <Button onPress={() =>  {  setselectedCourse("CLINICAL COSMETOLOGY AND TRICHOLOGY COURSE") ;  onOpen() } } className="bg-[#4482FF] text-white px-6 py-2 rounded-lg ">
+            <Button onPress={() =>  {  setselectedCourse("CLINICAL COSMETOLOGY AND TRICHOLOGY COURSE") ;  onOpen() } } className="bg-[#FF5A5A] font-medium text-white px-6 py-2 rounded-lg ">
               Enroll Now
             </Button>
           </div>
@@ -798,7 +799,7 @@ const Page = () => {
             <h3 className="text-xl  font-poppinssemi mb-4 text-white">1 DAY AESTHETIC TRAINING ON WORK SHOP ONLEMON BOTTLE FAT DISSOLVING , SKIN BOOSTERS WITH MICRONEEDLEING</h3>
             <p className="text-gray500  text-slate-200 mb-6  font-poppinsreg ">{`Gain hands-on experience in fat dissolving with Lemon Bottle and microneedling with skin boosters in this 1-day aesthetic workshop. Learn injection techniques and safety protocols while mastering microneedling procedures to rejuvenate skin and dissolve fat with precision`}</p>
             <p className="text-blue600 text-[#FF6956] font-bold font-poppinsreg5 text-2xl mb-4">LKR 260,000</p>
-            <Button onPress={() =>  {  setselectedCourse("1 DAY AESTHETIC TRAINING ON WORK SHOP ONLEMON BOTTLE FAT DISSOLVING , SKIN BOOSTERS WITH MICRONEEDLEING") ;  onOpen() } } className="bg-[#4482FF] text-white px-6 py-2 rounded-lg ">
+            <Button onPress={() =>  {  setselectedCourse("1 DAY AESTHETIC TRAINING ON WORK SHOP ONLEMON BOTTLE FAT DISSOLVING , SKIN BOOSTERS WITH MICRONEEDLEING") ;  onOpen() } } className="bg-[#FF5A5A] font-medium text-white px-6 py-2 rounded-lg ">
               Enroll Now
             </Button>
           </div>

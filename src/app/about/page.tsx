@@ -300,15 +300,17 @@ const Page = () => {
 
             <div className="  font-poppinsreg5 gap-14 lg:flex hidden items-center"> 
             {/* onClick={() => scrollToSection(servicesWeOfferSection)}  */}
+            {/* decoration-[#4482FF] */}
               {/* <h1 onClick={() => scrollToSection(aboutUsSection)} className=" cursor-pointer" >About Us </h1> */}
               {/* <Link href="/services"> <h1    className=" cursor-pointer"  >Services & Pricings </h1> </Link> */}
               {/* <h1 onClick={() => scrollToSection(portfolioSection)}  className=" cursor-pointer"  > Our Works </h1> */}
               <h1  onClick={() => router.push('/')}  className=" cursor-pointer text-[#E0E0E0]  "  >Home </h1>
               <h1  onClick={() => router.push('/courses')}  className=" cursor-pointer text-[#E0E0E0]  "  >Courses </h1>
-              <h1  onClick={() => router.push('/about')}  className=" underline decoraton-2 underline-offset-4 decoration-[#4482FF] cursor-pointer text-[#E0E0E0]  "  >About Us </h1>
+              <h1  onClick={() => router.push('/about')}  className=" underline decoraton-2 underline-offset-4 decoration-white cursor-pointer text-[#E0E0E0]  "  >About Us </h1>
               {/* <h1 onClick={() => scrollToSection(faqsection)}  className=" cursor-pointer text-[#E0E0E0]  "  >FAQs </h1> */}
               {/* <h1 onClick={() => scrollToSection(testimonialsection)}  className=" cursor-pointer text-[#E0E0E0]"  >Testimonials </h1> */}
-             <Link href="/shop"> <h1  className=" cursor-pointer  bg-[#4482FF] hover:bg-[#4279e7] px-4 py-1 text-sm text-white rounded-full"  >SHOP </h1> </Link>
+             {/* <Link href="/shop"> <h1  className=" cursor-pointer  bg-[#4482FF] hover:bg-[#4279e7] px-4 py-1 text-sm text-white rounded-full"  >SHOP </h1> </Link> */}
+             <Link href="/shop"> <h1  className=" cursor-pointer  bg-[#FF5A5A] hover:bg-[#e95252] px-4 py-1 text-sm text-white rounded-full"  >SHOP </h1> </Link>
               {/* <h1 onClick={() => scrollToSection(contactussection)}  className=" cursor-pointer"  >Contact us </h1> */}
               
             </div>
@@ -460,7 +462,8 @@ const Page = () => {
  <section className="bg-whitee bg-[#0A0A1D] py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Section Title */}
-        <h3 className="text-[#f26342]  font-robotobold text-lg mb-2">Course Mentors</h3>
+        {/* <h3 className="text-[#f26342]  font-robotobold text-lg mb-2">Course Mentors</h3> */}
+        <h3 className="text-[#FF5A5A]  font-robotobold text-lg mb-2">Course Mentors</h3>
         <h2 className="text-4xl  text-white font-poppinssemi text-gray900 mb-6">
           Meet Our Expert Instructors
         </h2>
@@ -474,10 +477,10 @@ const Page = () => {
           <div className="flex flex-col items-center">
             <img
               src="/mentor1.jpeg"
-              alt="Dr. Muhammadh Muzammil"
+              alt="Dr. Muzammil Nawaz"
               className="w-40 h-40 rounded-full object-cover mb-4"
             />
-            <h3 className="text-xl font-semibold text-white">Dr. Muhammadh Muzammil</h3>
+            <h3 className="text-xl font-semibold text-white">Dr. Muzammil Nawaz</h3>
             <p className="text-sm text-gray500  text-slate-200 mb-2">Aesthetics Physician And Cosmetologist</p>
           </div>
 

@@ -271,7 +271,8 @@ export default function Shop() {
               <h1  onClick={() => router.push('/about')}  className="  cursor-pointer text-[#E0E0E0]  "  >About Us </h1>
               {/* <h1 onClick={() => scrollToSection(faqsection)}  className=" cursor-pointer text-[#E0E0E0]  "  >FAQs </h1> */}
               {/* <h1 onClick={() => scrollToSection(testimonialsection)}  className=" cursor-pointer text-[#E0E0E0]"  >Testimonials </h1> */}
-             <Link href="/shop"> <h1  className=" cursor-pointer  bg-[#4482FF] hover:bg-[#4279e7] px-4 py-1 text-sm text-white rounded-full"  >SHOP </h1> </Link>
+             {/* <Link href="/shop"> <h1  className=" cursor-pointer  bg-[#4482FF] hover:bg-[#4279e7] px-4 py-1 text-sm text-white rounded-full"  >SHOP </h1> </Link> */}
+             <Link href="/shop"> <h1  className=" cursor-pointer bg-[#FF5A5A] hover:bg-[#e95252] px-4 py-1 text-sm text-white rounded-full"  >SHOP </h1> </Link>
               {/* <h1 onClick={() => scrollToSection(contactussection)}  className=" cursor-pointer"  >Contact us </h1> */}
               
             </div>
@@ -429,7 +430,7 @@ export default function Shop() {
           <option value="Category 2">Category 2</option>
         </select>
       </div>
-
+      {/* bg-[#4482FF] */}
       {/* Products Section */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         {filteredProducts.map((product) => (
@@ -443,7 +444,7 @@ export default function Shop() {
               <p className="text-sm text-gray-400 mt-1">{product.description}</p>
               <p className="text-lg font-semibold text-[#FF6956] mt-2">LKR {product.price}</p>
               <Link href={`/shop/product/${product.id}`}>
-                <h1 className="block mt-4 bg-[#4482FF] text-white text-center py-2 rounded-md ">
+                <h1 className="block mt-4  bg-[#FF5A5A] font-medium text-white text-center py-2 rounded-md ">
                   View Details
                 </h1>
               </Link>

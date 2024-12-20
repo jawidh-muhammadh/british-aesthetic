@@ -259,7 +259,8 @@ export default function ProductDetails() {
               <h1  onClick={() => router.push('/about')}  className="  cursor-pointer text-[#E0E0E0]  "  >About Us </h1>
               {/* <h1 onClick={() => scrollToSection(faqsection)}  className=" cursor-pointer text-[#E0E0E0]  "  >FAQs </h1> */}
               {/* <h1 onClick={() => scrollToSection(testimonialsection)}  className=" cursor-pointer text-[#E0E0E0]"  >Testimonials </h1> */}
-             <Link href="/shop"> <h1  className=" cursor-pointer  bg-[#4482FF] hover:bg-[#4279e7] px-4 py-1 text-sm text-white rounded-full"  >SHOP </h1> </Link>
+             {/* <Link href="/shop"> <h1  className=" cursor-pointer  bg-[#4482FF] hover:bg-[#4279e7] px-4 py-1 text-sm text-white rounded-full"  >SHOP </h1> </Link> */}
+             <Link href="/shop"> <h1  className=" cursor-pointer bg-[#FF5A5A] hover:bg-[#e95252] px-4 py-1 text-sm text-white rounded-full"  >SHOP </h1> </Link>
               {/* <h1 onClick={() => scrollToSection(contactussection)}  className=" cursor-pointer"  >Contact us </h1> */}
               
             </div>
@@ -386,7 +387,8 @@ export default function ProductDetails() {
 
   </div>
   </div>
-
+  {/* bg-[#FF5A5A] font-medium */}
+  {/* [#FF6956 */}
     <div className="p-6 bg-[#0b1217] min-h-screen">
       <div className="max-w-5xl mx-auto">
         {/* Product Section */}
@@ -396,7 +398,7 @@ export default function ProductDetails() {
             <div className="p-6">
               <h1 className="text-3xl font-bold text-white">{product.name}</h1>
               <p className="text-sm text-gray-400 mt-2">{product.description}</p>
-              <p className="text-2xl font-bold text-[#FF6956] mt-4">${product.price}</p>
+              <p className="text-2xl font-bold text-[#FF5A5A] mt-4">LKR {product.price}</p>
               <a
                 href={`https://wa.me/94706548855?text=Hello, I want to buy ${product.name}`}
                 className="bg-green-500 text-white px-6 py-3 rounded-md mt-6 inline-block hover:bg-green-600 transition"
@@ -423,7 +425,7 @@ export default function ProductDetails() {
                 <p className="text-sm text-gray-400 mt-1">{p.description}</p>
                 <p className="text-lg  font-semibold text-[#FF6956] mt-2">LKR {p.price}</p>
                 <Link href={`/shop/product/${p.id}`}>
-                  <h1 className="block mt-4 bg-blue-600 text-white text-center py-2 rounded-md hover:bg-blue-700">
+                  <h1 className="block mt-4 bg-[#FF5A5A] font-medium text-white text-center py-2 rounded-md ">
                     View Details
                   </h1>
                 </Link>

@@ -300,11 +300,11 @@ export default function Home() {
 
 
   return (
-
+    // bg-[#0A0A1D]
     <>
     <div className=" w-full   bg-[#2C2C2C]] bg-[#101010]] bg-[#0A0A1D] overflow-hidden flex flex-col items-center justify-center">
 
-      <div className=" max-w-7xl bg-[#0A0A1D]   2xl:min-h-fit 2xl:h-fit  lg:h-screen min-h-screen w-full">
+      <div className=" max-w-7xl  bg-[#0A0A1D]   2xl:min-h-fit 2xl:h-fit  lg:h-screen min-h-screen w-full">
 
         <div className=" w-full  2xl:h-fit  h-full flex flex-col p-4">
           
@@ -323,12 +323,13 @@ export default function Home() {
               {/* <h1 onClick={() => scrollToSection(aboutUsSection)} className=" cursor-pointer" >About Us </h1> */}
               {/* <Link href="/services"> <h1    className=" cursor-pointer"  >Services & Pricings </h1> </Link> */}
               {/* <h1 onClick={() => scrollToSection(portfolioSection)}  className=" cursor-pointer"  > Our Works </h1> */}
-              <h1  onClick={() => router.push('/')}  className=" cursor-pointer underline decoraton-2 underline-offset-4 decoration-[#4482FF] text-[#E0E0E0]  "  >Home </h1>
+              <h1  onClick={() => router.push('/')}  className=" cursor-pointer underline decoraton-2 underline-offset-4 decoration-white text-[#E0E0E0]  "  >Home </h1>
               <h1  onClick={() => router.push('/courses')}  className=" cursor-pointer  text-[#E0E0E0]  "  >Courses </h1>
               <h1  onClick={() => router.push('/about')}  className=" cursor-pointer text-[#E0E0E0]  "  >About Us </h1>
               {/* <h1 onClick={() => scrollToSection(faqsection)}  className=" cursor-pointer text-[#E0E0E0]  "  >FAQs </h1> */}
               {/* <h1 onClick={() => scrollToSection(testimonialsection)}  className=" cursor-pointer text-[#E0E0E0]"  >Testimonials </h1> */}
              <Link href="/shop"> <h1  className=" cursor-pointer  bg-[#4482FF] hover:bg-[#4279e7] px-4 py-1 text-sm text-white rounded-full"  >SHOP </h1> </Link>
+             <Link href="/shop"> <h1  className=" cursor-pointer  bg-[#FF5A5A] hover:bg-[#e95252] px-4 py-1 text-sm text-white rounded-full"  >SHOP </h1> </Link>
               {/* <h1 onClick={() => scrollToSection(contactussection)}  className=" cursor-pointer"  >Contact us </h1> */}
               
             </div>
@@ -453,7 +454,8 @@ export default function Home() {
              <div className=" flex lg:justify-normal justify-center"> 
               {/* <button onClick={() => scrollToSection(servicesWeOfferSection)} className=" rounded-md px-10  font-robotosemi font-medium py-2 text-white bg-[#E30B5C] hover:bg-[#ce1156] transition-colors  delay-75 duration-75 ease-in">Our Services </button> */}
              {/* <Button  onPress={() => scrollToSection(coursesection)} className=" rounded-md px-10  font-robotosemi font-medium py-2 text-white bg-[#4482FF]  transition-colors  delay-75 duration-75 ease-in">Enroll Now   </Button> */}
-             <Button  onPress={() =>  router.push('/courses') } className=" rounded-md px-10  font-robotosemi font-medium py-2 text-white bg-[#4482FF]  transition-colors  delay-75 duration-75 ease-in">Enroll Now   </Button>
+             {/* <Button  onPress={() =>  router.push('/courses') } className=" rounded-md px-10  font-robotosemi font-medium py-2 text-white bg-[#4482FF]  transition-colors  delay-75 duration-75 ease-in">Enroll Now   </Button> */}
+             <Button  onPress={() =>  router.push('/courses') } className=" rounded-md px-10  font-robotosemi font-medium py-2 text-white bg-[#FF5A5A]  transition-colors  delay-75 duration-75 ease-in">Enroll Now   </Button>
             </div>
             
              </div>
@@ -461,7 +463,8 @@ export default function Home() {
              <div className="lg:order-2 order-1 lg:mt-0 mt-10 "> 
 
               {/* <Image src="/hero.png" alt="" width={500} height={500} className=" w-full flex   transform scale-x-[-1]    md:h-80  h-56 object-contain   lg:h-full" /> */}
-              <Image src="/cover.jpeg" alt="" width={500} height={500} className="  mx-auto flex rounded-2xl   transform scale-x-[-1]    md:h-80  h-56 object-cover w-fit   lg:h-full" />
+              {/* <Image src="/cover.jpeg" alt="" width={500} height={500} className="  mx-auto flex rounded-2xl   transform scale-x-[-1]    md:h-80  h-56 object-cover w-fit   lg:h-full" /> */}
+              <Image src="/hero1.jpg" alt="" width={500} height={500} className="  mx-auto flex rounded-2xl   transform scale-x-[-1]    md:h-80  h-56 object-cover w-fit   lg:h-full" />
               
              </div>
 
@@ -650,7 +653,7 @@ export default function Home() {
 
 
         {/* fourth section correct  */}
-        <div ref={sectionRef} className="bg-[#1a304b]] bg-[#2C2C2C]] bg-[#101010] w-full text-white py-24">
+        <div ref={sectionRef} className="bg-[#1a304b]] bg-[#2C2C2C]] bg-[#101010]] bg-[#00284B]  w-full text-white py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h1 className=" lg:text-5xl text-4xl font-extrabold mb-4">Unlock Your Aesthetic Career Potential</h1>
         <p className="text-lg max-w-6xl mx-auto mb-8">
@@ -663,25 +666,26 @@ export default function Home() {
           {/* Trainees */}
           <div className="flex flex-col items-center">
             <h2 className="text-5xl font-bold">{trainees}+</h2>
-            <p className="text-[#f26342] font-semibold">Course Trainees</p>
+            {/* <p className="text-[#f26342] font-semibold">Course Trainees</p> */}
+            <p className="text-[#FF5A5A] font-semibold">Course Trainees</p>
           </div>
           
           {/* Courses */}
           <div className="flex flex-col items-center">
             <h2 className="text-5xl font-bold">{courses}+</h2>
-            <p className="text-[#f26342] font-semibold">Courses</p>
+            <p className="text-[#FF5A5A] font-semibold">Courses</p>
           </div>
           
           {/* Instructors */}
           <div className="flex flex-col items-center">
             <h2 className="text-5xl font-bold">{instructors}</h2>
-            <p className="text-[#f26342] font-semibold">Instructors</p>
+            <p className="text-[#FF5A5A] font-semibold">Instructors</p>
           </div>
           
           {/* Satisfaction */}
           <div className="flex flex-col items-center">
             <h2 className="text-5xl font-bold">{satisfaction}%</h2>
-            <p className="text-[#f26342] font-semibold">Satisfaction</p>
+            <p className="text-[#FF5A5A] font-semibold">Satisfaction</p>
           </div>
         </div>
       </div>
@@ -859,7 +863,8 @@ export default function Home() {
                       viewBox="0 0 24 24"
                       stroke-width="1.5"
                       stroke="currentColor"
-                      className="w-10 select-none   bg-[#E30B5C] p-2 rounded-full text-white h-10"
+                      // className="w-10 select-none   bg-[#E30B5C] p-2 rounded-full text-white h-10"
+                      className="w-10 select-none   bg-[#FF5A5A] p-2 rounded-full text-white h-10"
   
                       // tabIndex={0} // Add
                     >
@@ -893,7 +898,8 @@ export default function Home() {
 
         {/* Testimonial Card 2 */}
         <div className="snap-center border flex-shrink-0 w-[300px] bg-white rounded-lg shadow-lg p-6">
-           <Image src="/per1.jpg" width={100} height={100} alt="User" className="rounded-full  object-cover w-16 h-16 mx-auto" />
+           {/* <Image src="/per1.jpg" width={100} height={100} alt="User" className="rounded-full  object-cover w-16 h-16 mx-auto" /> */}
+           <Image src="/no-profile.webp" width={100} height={100} alt="User" className="rounded-full  object-cover w-16 h-16 mx-auto" />
           <h3 className="mt-4 text-center text-lg font-semibold"> Dr. R N Wickramasinghe</h3>
           {/* <p className="text-center text-sm text-gray-500">Co-founder, Green Earth UK</p> */}
           <p className="text-center mt-4 text-gray-600">
@@ -908,7 +914,8 @@ export default function Home() {
 
         {/* Testimonial Card 3 */}
         <div className="snap-center border flex-shrink-0 w-[300px] bg-white rounded-lg shadow-lg p-6">
-       <Image src="/per2.jpg" width={100} height={100} alt="User" className="rounded-full object-cover w-16 h-16 mx-auto" />
+       {/* <Image src="/per2.jpg" width={100} height={100} alt="User" className="rounded-full object-cover w-16 h-16 mx-auto" /> */}
+       <Image src="/no-profile.webp" width={100} height={100} alt="User" className="rounded-full object-cover w-16 h-16 mx-auto" />
           <h3 className="mt-4 text-center text-lg font-semibold"> Dr. A M Heshani</h3>
           {/* <p className="text-center text-sm text-gray-500">CEO, TechBoost Malaysia</p> */}
           <p className="text-center mt-4 text-gray-600">
@@ -923,7 +930,8 @@ export default function Home() {
 
 
         <div className="snap-center border flex-shrink-0 w-[300px] bg-white rounded-lg shadow-lg p-6">
-          <Image src="/per3.jpg" width={100} height={100} alt="User" className="rounded-full  object-cover w-16 h-16 mx-auto" />
+          {/* <Image src="/per3.jpg" width={100} height={100} alt="User" className="rounded-full  object-cover w-16 h-16 mx-auto" /> */}
+          <Image src="/no-profile.webp" width={100} height={100} alt="User" className="rounded-full  object-cover w-16 h-16 mx-auto" />
           <h3 className="mt-4 text-center text-lg font-semibold">Dr. C P Jayasinghe</h3>
           {/* <p className="text-center text-sm text-gray-500">Owner, Spice Culture Restaurant, India</p> */}
           <p className="text-center mt-4 text-gray-600">
@@ -938,7 +946,8 @@ export default function Home() {
 
 
         <div className="snap-center border flex-shrink-0 w-[300px] bg-white rounded-lg shadow-lg p-6">
-          <Image src="/per4.jpg" width={100} height={100} alt="User" className="rounded-full  object-cover w-16 h-16 mx-auto" />
+          {/* <Image src="/per4.jpg" width={100} height={100} alt="User" className="rounded-full  object-cover w-16 h-16 mx-auto" /> */}
+          <Image src="/no-profile.webp" width={100} height={100} alt="User" className="rounded-full  object-cover w-16 h-16 mx-auto" />
           <h3 className="mt-4 text-center text-lg font-semibold">Dr. S L Wijerathne</h3>
           {/* <p className="text-center text-sm text-gray-500">Founder, UrbanFit Gyms, India</p> */}
           <p className="text-center mt-4 text-gray-600">
@@ -952,7 +961,8 @@ export default function Home() {
         </div>
 
         <div className="snap-center border flex-shrink-0 w-[300px] bg-white rounded-lg shadow-lg p-6">
-          <Image src="/per5.jpg" width={100} height={100} alt="User" className="rounded-full  object-cover w-16 h-16 mx-auto" />
+          {/* <Image src="/per5.jpg" width={100} height={100} alt="User" className="rounded-full  object-cover w-16 h-16 mx-auto" /> */}
+          <Image src="/no-profile.webp" width={100} height={100} alt="User" className="rounded-full  object-cover w-16 h-16 mx-auto" />
           <h3 className="mt-4 text-center text-lg font-semibold">Dr. T D Perera</h3>
           {/* <p className="text-center text-sm text-gray-500">Head of Marketing, Serenity Spa, UK</p> */}
           <p className="text-center mt-4 text-gray-600">
@@ -967,7 +977,8 @@ export default function Home() {
 
 
         <div className="snap-center border flex-shrink-0 w-[300px] bg-white rounded-lg shadow-lg p-6">
-          <Image src="/per6.jpg" width={100} height={100} alt="User" className="rounded-full  object-cover w-16 h-16 mx-auto" />
+          {/* <Image src="/per6.jpg" width={100} height={100} alt="User" className="rounded-full  object-cover w-16 h-16 mx-auto" /> */}
+          <Image src="/no-profile.webp" width={100} height={100} alt="User" className="rounded-full  object-cover w-16 h-16 mx-auto" />
           <h3 className="mt-4 text-center text-lg font-semibold">Dr. N H Senarath</h3>
           {/* <p className="text-center text-sm text-gray-500">Operations Manager, EcoTech Solutions, Malaysia</p> */}
           <p className="text-center mt-4 text-gray-600">
@@ -1002,7 +1013,8 @@ export default function Home() {
                       viewBox="0 0 24 24"
                       stroke-width="1.5"
                       stroke="currentColor"
-                      className="w-10 select-none  bg-[#E30B5C] p-2 rounded-full text-white h-10"
+                      // className="w-10 select-none  bg-[#E30B5C] p-2 rounded-full text-white h-10"
+                      className="w-10 select-none  bg-[#FF5A5A] p-2 rounded-full text-white h-10"
   
                       // tabIndex={0} // Add
                     >
@@ -1025,10 +1037,11 @@ export default function Home() {
 
  {/* MENTORS  */}
 
- <section className="bg-whitee bg-[#0A0A1D] py-16">
+ <section className="bg-whitee bg-[#0A0A1D]] bg-[#00284B] py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Section Title */}
-        <h3 className="text-[#f26342]  font-robotobold text-lg mb-2">Course Mentors</h3>
+        {/* <h3 className="text-[#f26342]  font-robotobold text-lg mb-2">Course Mentors</h3> */}
+        <h3 className="text-[#FF5A5A]  font-robotobold text-lg mb-2">Course Mentors</h3>
         <h2 className="text-4xl  text-white font-poppinssemi text-gray900 mb-6">
           Meet Our Expert Instructors
         </h2>
@@ -1042,10 +1055,10 @@ export default function Home() {
           <div className="flex flex-col items-center">
             <img
               src="/mentor1.jpeg"
-              alt="Dr. Muhammadh Muzammil"
+              alt="Dr. Muzammil Nawaz"
               className="w-40 h-40 rounded-full object-cover mb-4"
             />
-            <h3 className="text-xl font-semibold text-white">Dr. Muhammadh Muzammil</h3>
+            <h3 className="text-xl font-semibold text-white">Dr. Muzammil Nawaz</h3>
             <p className="text-sm text-gray500  text-slate-200 mb-2">Aesthetics Physician And Cosmetologist</p>
           </div>
 
