@@ -14,6 +14,7 @@ import { app } from "@/utils/firebase";
 // import second from "../../public/2.jpg"
 // import third from "../../public/3 .jpg"
 
+
 import { motion } from 'framer-motion';
 
 import { getFirestore, collection, addDoc } from 'firebase/firestore';
@@ -316,7 +317,7 @@ export default function Home() {
             {/* <Image src="/logotext.png" alt="" width={1000} height={1000} className=" w-36 flex    h-fit object-cover" />  */}
             {/* <Image src="/logobritish.png" alt="" width={1000} height={1000} className=" w-16 lg:flex hidden   h-fit object-cover" />  */}
             {/* <Image src="/logoN.png" alt="" width={2000} height={2000} className=" w16 w-36 lg:flex hidden   h-fit object-cover" />  */}
-                 <Image src="/logocorrect.png" alt="" width={2000} height={2000} className=" w16 w-36 lg:flex hidden   h-fit object-cover" /> 
+                 <Image src="/logocorrect.PNG" alt="" width={2000} height={2000} className=" w16 w-36 lg:flex hidden   h-fit object-cover" /> 
         
             {/* <Image src="/logomainblack.png" alt="" width={1000} height={1000} className=" w-28  flex lg:hidden   h-fit object-cover" />  */}
 
@@ -352,7 +353,7 @@ export default function Home() {
       {/* <Image src={logoText} alt="" width={500} height={500}  className=" w-36 h-fit object-cover" /> */}
       {/* <Image src="/logobritish.png" alt="" width={1000} height={1000} className=" w-16    h-fit object-cover" />  */}
       {/* <Image src="/logoN.png" alt="" width={2000} height={2000} className=" w-24    h-fit object-cover" />  */}
-      <Image src="/logocorrect.png"  alt="" width={2000} height={2000} className=" w-24    h-fit object-cover" /> 
+      <Image src="/logocorrect.PNG"  alt="" width={2000} height={2000} className=" w-24    h-fit object-cover" /> 
 
         <svg onClick={ () => setopenModal(true)} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-6 text-white">
 <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
