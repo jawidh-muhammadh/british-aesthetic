@@ -1293,7 +1293,7 @@ export default function Home() {
             className={`  font-poppinsreg mt-1 lg:text-base text-sm flex flex-col gap-1  text-white `}
           >
             <a href="https://www.facebook.com/profile.php?id=61556466174481" className=""> Facebook </a>
-             <a  href="https://www.instagram.com/britishaeasthics7"> <h1 className=""> Instagram </h1> </a> 
+             <a  href="https://www.instagram.com/Baa_Sri_Lanka_"> <h1 className=""> Instagram </h1> </a> 
             {/* <h1 className=""> Twitter </h1> */}
             <a href="https://www.tiktok.com/@britishaeasthics7?_t=8qZTwPLqSo4&_r=1" className="">  <h1 className=""> TikTok </h1>  </a>
             {/* <h1> FAQs </h1> */}
