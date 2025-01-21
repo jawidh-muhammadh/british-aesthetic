@@ -1099,6 +1099,21 @@ export default function Home() {
               Lecturer in Anatomy and Physiology | Cosmetic Physician
             </p>
           </div>
+
+
+             {/* Mentor 5 - change done on 21st january 2025 : 5:44 PM  */}
+             <div className="flex flex-col items-center">
+            <img
+              src="/mentor5.jpeg"
+              alt="Dr. Shariba Anhar"
+              className="w-40 h-40 rounded-full object-cover mb-4"
+            />
+            <h3 className="text-xl font-semibold text-white">Dr. Shariba Anhar</h3>
+            <p className="text-sm text-gray500 text-slate-200 mb-2">
+             Master Injector
+            </p>
+          </div>
+          {/* Mentor 5 - change done on 21st january 2025 : 5:44 PM  */}
         </div>
       </div>
     </section>
